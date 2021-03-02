@@ -1,6 +1,7 @@
 import { Fade, List, ListItem, makeStyles } from "@material-ui/core";
 import Drawer from "@material-ui/core/Drawer";
 import React, { useEffect, useState } from "react";
+import useFadeIn from "../../hooks/useFadeIn";
 
 const drawerWidth = 240;
 const useStyles = makeStyles({
@@ -51,7 +52,13 @@ export default function Nav(props) {
     window.addEventListener("scroll", handleScroll, false);
     return () => window.removeEventListener("scroll", handleScroll, false);
   }, []);
-
+  const navItems = [
+    { text: "About", url: "#about" },
+    { text: "Experience", url: "#experience" },
+    { text: "Work", url: "#work" },
+    { text: "Contact", url: "#contact" },
+    { text: "Resume", url: "/YoungTran.pdf" },
+  ];
   const drawer = (
     <div className="flex justify-center mt-10">
       <List>
@@ -93,14 +100,36 @@ export default function Nav(props) {
       </List>
     </div>
   );
+  const { isMounted } = useFadeIn();
 
   return (
     <div className={`w-full sm:px-14 mx-auto fixed z-50 ${boxShadow}`}>
       <Fade in={visible === "visible"}>
         <nav className={`sm:flex items-center justify-between py-5 hidden`}>
-          <img src="/logo-2.svg" alt="logo-2" className="h-10 w-28" />
+          <Fade in={true} timeout={{ enter: 2000 }}>
+            <img src="/logo-2.svg" alt="logo-2" className="h-10 w-28" />
+          </Fade>
           <div className="flex text-xl items-center space-x-20">
-            <a className="nav-link" href="/#about">
+            {isMounted &&
+              navItems.map(({ text, url }, i) => {
+                if (text === "Resume")
+                  return (
+                    <Fade in={true} timeout={{ enter: i * 1000 }} key={i}>
+                      <a className="resume-btn" href={url} target="_blank">
+                        {text}
+                      </a>
+                    </Fade>
+                  );
+                else
+                  return (
+                    <Fade in={true} timeout={{ enter: i * 1000 }} key={i}>
+                      <a className="nav-link" href={url}>
+                        {text}
+                      </a>
+                    </Fade>
+                  );
+              })}
+            {/* <a className="nav-link" href="/#about">
               About
             </a>
 
@@ -118,7 +147,7 @@ export default function Nav(props) {
 
             <a className="resume-btn" href="/YoungTran.pdf" target="_blank">
               Resume
-            </a>
+            </a> */}
           </div>
         </nav>
       </Fade>
