@@ -1,0 +1,11 @@
+.nav-link {
+  @apply text-theme-regular-white hover:text-theme-light-blue;
+}
+
+.resume-btn {
+  @apply text-theme-regular-white bg-theme-light-blue hover:border-theme-light-gray hover:bg-theme-light-gray px-4 py-2 border border-theme-light-blue rounded;
+}
+
+.blur {
+  backdrop-filter: blur(10px);
+}
