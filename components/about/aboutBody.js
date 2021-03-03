@@ -40,6 +40,7 @@ export default function AboutBody() {
         As a{" "}
         <a
           href="https://www.42.fr/"
+          target="_blank"
           className="text-theme-light-blue font-medium text-md"
         >
           42 Silicon Valley Alumni

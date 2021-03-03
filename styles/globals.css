@@ -96,3 +96,7 @@ a {
 .grecaptcha-badge {
   visibility: hidden;
 }
+
+.skill-list {
+  @apply w-1/2 sm:w-2/5 text-lg hover:text-theme-azure-blue;
+}

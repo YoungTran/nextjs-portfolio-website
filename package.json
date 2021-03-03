@@ -1,4 +1,7 @@
 {
+  "cacheDirectories": [
+    ".next/cache"
+  ],
   "name": "person_website_v2",
   "version": "0.1.0",
   "private": true,
@@ -29,6 +32,5 @@
   },
   "engines": {
     "node": "12.x"
-  },
-  "proxy": "http://localhost:3000"
+  }
 }

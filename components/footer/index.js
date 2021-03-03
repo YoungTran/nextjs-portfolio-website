@@ -19,22 +19,22 @@ export default function Footer() {
         <ul className="flex text-theme-dark-gray items-center justify-center space-x-4 text-2xl">
           <li className="cursor-pointer">
             <a href="https://www.twitter.com/ynngtran">
-              <i className="fa fa-instagram hover:text-theme-light-blue"></i>
+              <i className="fa fa-instagram hover:text-theme-azure-blue"></i>
             </a>
           </li>
           <li className="cursor-pointer">
             <a href="https://www.twitter.com/ynngtran">
-              <i className="fa fa-twitter hover:text-theme-light-blue"></i>
+              <i className="fa fa-twitter hover:text-theme-azure-blue"></i>
             </a>
           </li>
           <li className="cursor-pointer">
             <a href="https://www.linkedin.com/in/youngtrann">
-              <i className="fa fa-linkedin hover:text-theme-light-blue"></i>
+              <i className="fa fa-linkedin hover:text-theme-azure-blue"></i>
             </a>
           </li>
           <li className="cursor-pointer">
             <a href="https://www.github.com/youngtran">
-              <i className="fa fa-github hover:text-theme-light-blue"></i>
+              <i className="fa fa-github hover:text-theme-azure-blue"></i>
             </a>
           </li>
         </ul>

@@ -30,7 +30,7 @@ export default function WorkSlider({ repos }) {
                 .split("-")
                 .map((str) => str.charAt(0).toUpperCase() + str.slice(1) + " ")}
               <a href={repo.html_url}>
-                <i className="fa fa-github text-5xl hover:text-theme-light-blue"></i>
+                <i className="fa fa-github text-5xl hover:text-theme-azure-blue"></i>
               </a>
             </h1>
 
