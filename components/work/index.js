@@ -28,7 +28,7 @@ const projectShowcases = [
 
 export default function Work({ repos }) {
   return (
-    <section id="work" className="py-10 my-10">
+    <section id="work" className="py-10 my-10 walterTurncoat">
       <div className="max-w-5xl mx-auto px-6 sm:px-0 ">
         <header className="mb-16">
           <h3 className="text-2xl font-poppins text-theme-light-gray font-extrabold">
@@ -39,7 +39,7 @@ export default function Work({ repos }) {
           return <WorkItem project={project} key={i} id={i} />;
         })}
       </div>
-      <div className="max-w-5xl mx-auto px-6 sm:px-0 py-16">
+      <div className="max-w-5xl mx-auto px-6 sm:px-0 py-16 walterTurncoat">
         <header className="mb-16">
           <h3 className="text-2xl font-poppins text-theme-light-gray font-extrabold text-center">
             Other Noteworthy Projects

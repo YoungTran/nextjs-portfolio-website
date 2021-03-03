@@ -1,4 +1,4 @@
-import { Fade, List, ListItem, makeStyles } from "@material-ui/core";
+import { Collapse, Fade, List, ListItem, makeStyles } from "@material-ui/core";
 import Drawer from "@material-ui/core/Drawer";
 import React, { useEffect, useState } from "react";
 import useFadeIn from "../../hooks/useFadeIn";
@@ -104,12 +104,12 @@ export default function Nav(props) {
 
   return (
     <div className={`w-full sm:px-14 mx-auto fixed z-50 ${boxShadow}`}>
-      <Fade in={visible === "visible"}>
+      <Collapse in={visible === "visible"}>
         <nav className={`sm:flex items-center justify-between py-5 hidden`}>
           <Fade in={true} timeout={{ enter: 2000 }}>
             <img src="/logo-2.svg" alt="logo-2" className="h-10 w-28" />
           </Fade>
-          <div className="flex text-xl items-center space-x-20">
+          <div className="flex text-xl items-center space-x-20 walterTurncoat">
             {isMounted &&
               navItems.map(({ text, url }, i) => {
                 if (text === "Resume")
@@ -150,7 +150,7 @@ export default function Nav(props) {
             </a> */}
           </div>
         </nav>
-      </Fade>
+      </Collapse>
 
       {/* TODO: mobile nav */}
       <Fade in={visible === "visible"}>

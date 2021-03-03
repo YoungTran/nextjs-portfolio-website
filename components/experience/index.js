@@ -6,7 +6,7 @@ export default function Experience() {
   const handleSetExperience = (value) => setCurrentExperience(value);
 
   return (
-    <section id="experience" className="py-20 my-10">
+    <section id="experience" className="py-20 my-10 walterTurncoat">
       <div className="max-w-5xl mx-auto px-6 sm:px-0">
         <div className="flex justify-center">
           <div className="w-full sm:w-2/3">

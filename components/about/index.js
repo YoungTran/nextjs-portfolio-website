@@ -4,7 +4,7 @@ import SkillList from "./skillList";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 my-10">
+    <section id="about" className="py-20 my-10 walterTurncoat">
       <div className="max-w-5xl mx-auto px-4 sm:px-0">
         <header className="mb-16">
           <h3 className="text-2xl font-poppins text-theme-light-gray font-bold">

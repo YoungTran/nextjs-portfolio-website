@@ -3,7 +3,7 @@
 }
 
 .resume-btn {
-  @apply text-theme-regular-white bg-theme-light-blue hover:border-theme-light-gray hover:bg-theme-light-gray px-4 py-2 border border-theme-light-blue rounded;
+  @apply text-theme-regular-white bg-theme-light-blue hover:border-theme-azure-blue hover:bg-theme-azure-blue px-4 py-2 border border-theme-light-blue rounded;
 }
 
 .blur {
