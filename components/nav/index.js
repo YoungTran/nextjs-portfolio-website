@@ -129,13 +129,32 @@ export default function Nav(props) {
                     </Fade>
                   );
               })}
+            {/* <a className="nav-link" href="/#about">
+              About
+            </a>
+
+            <a className="nav-link" href="/#experience">
+              Experience
+            </a>
+
+            <a className="nav-link" href="/#work">
+              Work
+            </a>
+
+            <a className="nav-link" href="/#contact">
+              Contact
+            </a>
+
+            <a className="resume-btn" href="/YoungTran.pdf" target="_blank">
+              Resume
+            </a> */}
           </div>
         </nav>
       </Collapse>
 
       {/* TODO: mobile nav */}
 
-      <div className={`fixed w-screen p-5 blur z-50 shadow-2xl`}>
+      <div className="fixed w-screen p-3 shadow-2xl blur">
         <Collapse in={visible === "visible"}>
           <nav className="flex sm:hidden justify-between items-center">
             <img src="/logo-2.svg" className="h-10 w-28" alt="logo-2" />
