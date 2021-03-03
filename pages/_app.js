@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import "tailwindcss/tailwind.css";
 import About from "../components/about";
@@ -8,6 +9,7 @@ import Footer from "../components/footer";
 import Hero from "../components/hero";
 import Nav from "../components/nav";
 import Work from "../components/work";
+import * as gtag from "../lib/gtag";
 import "../styles/globals.css";
 import { getRepos } from "./api/getRepos";
 
@@ -26,6 +28,17 @@ function MyApp({ Component, pageProps }) {
       clearTimeout(timer);
     };
   }, []);
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   const fetchRepo = async () => {
     const repos = await getRepos();
     return repos;
